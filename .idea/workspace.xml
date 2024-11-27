@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba66cbff-5296-4c88-af3c-64fda1249c87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/.github/workflow/cicd.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/java/naver/tpdms0159/publiccloud/PublicCloudApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/java/naver/tpdms0159/publiccloud/PublicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/java/naver/tpdms0159/publiccloud/PublicRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/java/naver/tpdms0159/publiccloud/PublicService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/java/naver/tpdms0159/publiccloud/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/java/naver/tpdms0159/publiccloud/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public-cloud/src/test/java/naver/tpdms0159/publiccloud/PublicCloudApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/cicd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/cicd.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

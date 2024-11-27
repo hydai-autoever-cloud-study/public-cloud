@@ -25,15 +25,40 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build -x test
 
-      - name: Docker Login
-        uses: docker/login-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v4
+      - name: DockerHub Upload
+        env:
+          NAME: ${{ secrets.DOCKERHUB_USERNAME}}
+          REPO: public-cloud
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t $REPO .
+          docker tag $REPO:latest $NAME/$REPO:$IMAGE_TAG
+          docker push $NAME/$REPO:$IMAGE_TAG
+          
+
+      - name: AWS Role 을 이용한 로그인
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/spring-app:latest
+          role-to-assume: arn:aws:iam::941377122831:role/public-cloud-image-push-role
+          role-session-name: sampleSessionName
+          aws-region: ap-northeast-2
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: build and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t $ECR_REGISTRY/django:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/django:$IMAGE_TAG
+
