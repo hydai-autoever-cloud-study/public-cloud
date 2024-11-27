@@ -73,22 +73,24 @@ jobs:
         run: |
           docker build -t $ECR_REGISTRY/public-cloud:$IMAGE_TAG .
           docker push $ECR_REGISTRY/public-cloud:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-        # 푸시된 이미지를 가지고 ECS 서비스 재시작
+      # 푸시된 이미지를 가지고 ECS 서비스 재시작
       - name: Fill in the new Image in the ECS task Definition
         id: task-def
-        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        uses: aws-actions/amazon-ecs-render-task-definition@ㅍ1
         with:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
-      - name: Deploy ECS task definition
-        uses: aws-actions/amazon-ecs-render-task-definition@v1
+      - name: Deploy ECS task definigion
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
+
 
 
