@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba66cbff-5296-4c88-af3c-64fda1249c87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/task-definition.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/cicd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/cicd.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="PublicCloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="public-cloud.main" />
