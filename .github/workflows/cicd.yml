@@ -78,7 +78,7 @@ jobs:
       # 푸시된 이미지를 가지고 ECS 서비스 재시작
       - name: Fill in the new Image in the ECS task Definition
         id: task-def
-        uses: aws-actions/amazon-ecs-render-task-definition@ㅍ1
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
           container-name: ${{ env.CONTAINER_NAME }}
