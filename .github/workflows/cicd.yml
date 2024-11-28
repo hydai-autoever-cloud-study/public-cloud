@@ -60,7 +60,7 @@ jobs:
           role-to-assume: arn:aws:iam::941377122831:role/public-cloud-image-push-role
           role-session-name: sampleSessionName
           aws-region: ap-northeast-2
-
+      # ECR 에 로그인
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
@@ -84,6 +84,7 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
+      # ECS task 배포
       - name: Deploy ECS task definigion
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:

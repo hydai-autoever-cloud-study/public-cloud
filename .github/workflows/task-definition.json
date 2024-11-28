@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:941377122831:task-definition/public-cloud-task-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:941377122831:task-definition/public-cloud-task:4",
     "containerDefinitions": [
         {
             "name": "public-cloud-tpdms",
-            "image": "jse0111/public-cloud:e61c73a9bfb86a9c9ce043118ef71932ef1cdb34",
+            "image": "941377122831.dkr.ecr.ap-northeast-2.amazonaws.com/public-cloud:3d6b5df0920e1a371ae41aff5821e3bd9d0e11b7",
             "cpu": 0,
             "portMappings": [
                 {
@@ -23,11 +23,11 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/public-cloud-task-definition",
+                    "awslogs-group": "/ecs/public-cloud-task",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
@@ -35,10 +35,10 @@
             "systemControls": []
         }
     ],
-    "family": "public-cloud-task-definition",
+    "family": "public-cloud-task",
     "executionRoleArn": "arn:aws:iam::941377122831:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 4,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -49,10 +49,16 @@
             "name": "ecs.capability.execution-role-awslogs"
         },
         {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
@@ -72,13 +78,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "512",
+    "cpu": "1024",
     "memory": "3072",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-11-27T23:38:54.003Z",
+    "registeredAt": "2024-11-28T03:01:44.734Z",
     "registeredBy": "arn:aws:iam::941377122831:root",
     "tags": []
 }
