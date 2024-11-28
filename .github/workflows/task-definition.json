@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:941377122831:task-definition/public-cloud-task:4",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:941377122831:task-definition/public-cloud-task:9",
     "containerDefinitions": [
         {
             "name": "public-cloud-tpdms",
-            "image": "941377122831.dkr.ecr.ap-northeast-2.amazonaws.com/public-cloud:3d6b5df0920e1a371ae41aff5821e3bd9d0e11b7",
+            "image": "941377122831.dkr.ecr.ap-northeast-2.amazonaws.com/public-cloud",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -38,7 +36,7 @@
     "family": "public-cloud-task",
     "executionRoleArn": "arn:aws:iam::941377122831:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 4,
+    "revision": 9,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -84,7 +82,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-11-28T03:01:44.734Z",
+    "registeredAt": "2024-11-28T05:12:42.389Z",
     "registeredBy": "arn:aws:iam::941377122831:root",
     "tags": []
 }
