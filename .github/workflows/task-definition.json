@@ -1,9 +1,7 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:941377122831:task-definition/public-cloud-task:9",
     "containerDefinitions": [
         {
             "name": "public-cloud-tpdms",
-            "image": "941377122831.dkr.ecr.ap-northeast-2.amazonaws.com/public-cloud",
             "cpu": 0,
             "portMappings": [
                 {
@@ -36,43 +34,9 @@
     "family": "public-cloud-task",
     "executionRoleArn": "arn:aws:iam::941377122831:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 9,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-        }
-    ],
+
     "placementConstraints": [],
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
@@ -82,7 +46,5 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-11-28T05:12:42.389Z",
-    "registeredBy": "arn:aws:iam::941377122831:root",
     "tags": []
 }
