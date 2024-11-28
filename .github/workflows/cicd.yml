@@ -13,7 +13,7 @@ permissions:
 env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: public-cloud
-  ECS_TASK_DEFINITION: ./task-definition.json
+  ECS_TASK_DEFINITION: ../workflows/task-definition.json
   CONTAINER_NAME: public-cloud-tpdms
   ECS_SERVICE: public-cloud-service
   ECS_CLUSTER: public-cloud
